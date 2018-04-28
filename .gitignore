@@ -1,8 +1,35 @@
+*.rbc
+*.swp
+*.gem
+.DS_Store
 /.bundle/
 /.yardoc
+/.idea
+/.rdoc
+/.rvmrc
 /_yardoc/
 /coverage/
+/doc
 /doc/
-/pkg/
 /spec/reports/
+/TAGS
+/misc
+/notes.txt
+
+# files created by running the specs
 /tmp/
+
+# gems built by `rake build`
+/pkg
+/pkg/
+
+# output from ronn
+/lib/bundler/man/
+man/*
+!man/*.ronn
+
+# rspec failure tracking
+.rspec_status
+
+# files generated during packaging
+/lib/bundler/generated/
