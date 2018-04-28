@@ -6,8 +6,15 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    ansi (1.5.0)
     ast (2.4.0)
+    builder (3.2.3)
     minitest (5.11.3)
+    minitest-reporters (1.2.0)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     parallel (1.12.1)
     parser (2.5.1.0)
       ast (~> 2.4.0)
@@ -31,6 +38,7 @@ DEPENDENCIES
   bundler (~> 1.16)
   enchanter!
   minitest (~> 5.0)
+  minitest-reporters (~> 1.2.0)
   rake (~> 10.0)
   rubocop (~> 0.55.0)
 
