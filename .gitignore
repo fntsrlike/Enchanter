@@ -33,3 +33,6 @@ man/*
 
 # files generated during packaging
 /lib/bundler/generated/
+
+# simple cov
+coverage
