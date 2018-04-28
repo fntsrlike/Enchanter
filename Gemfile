@@ -8,7 +8,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gemspec
 
 group :test do
-  gem 'rubocop', '~> 0.55.0', require: false
   gem 'minitest-reporters', '~> 1.2.0', require: false
+  gem 'rubocop', '~> 0.55.0', require: false
   gem 'simplecov', require: false
 end
