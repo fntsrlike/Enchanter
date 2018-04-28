@@ -4,5 +4,7 @@ require 'enchanter/version'
 
 # The top level Dotenv module. The entrypoint for the application logic.
 module Enchanter
-  # Your code goes here...
+  def self.hi(name = 'world')
+    puts "Hello #{name}"
+  end
 end
