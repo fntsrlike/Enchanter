@@ -6,7 +6,7 @@ module Enchanter
     module_function
 
     def name(filename)
-      # TODO
+      filename.split(/[-.]/).first
     end
   end
 end
