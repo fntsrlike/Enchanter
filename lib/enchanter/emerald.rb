@@ -24,5 +24,13 @@ module Enchanter
       pad = 3 - valid_version.split('.').length
       valid_version + '.0' * pad
     end
+
+    def snapshot(filename)
+      # TODO
+    end
+
+    def snapshot?(filename)
+      # TODO
+    end
   end
 end
