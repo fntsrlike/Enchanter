@@ -7,6 +7,7 @@ module Enchanter
   class EmeraldTest < Minitest::Test
     def test_stable_version
       filenames = [
+        'CommandBlock',
         'CommandBlock-1.12.2.jar',
         'CommandBlock-1.12.jar',
         'CommandBlock-1.jar'

@@ -9,7 +9,8 @@ module Enchanter
       filenames = [
         'CommandBlock-1.12.2.jar',
         'CommandBlock-1.12.jar',
-        'CommandBlock-1.jar'
+        'CommandBlock-1.jar',
+        'CommandBlock-1'
       ]
 
       filenames.each do |filename|

@@ -33,5 +33,9 @@ module Enchanter
     def test_without_name
       assert_equal '', Emerald.name('-1.12.2.jar')
     end
+
+    def test_without_extension_name
+      assert_equal 'CommandBlock', Emerald.name('CommandBlock-1.12.2')
+    end
   end
 end

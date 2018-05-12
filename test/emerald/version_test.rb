@@ -25,6 +25,10 @@ module Enchanter
       assert_equal '1.12.2', Emerald.version('CommandBlock-1.12.2.ab.bcd.jar')
     end
 
+    def test_without_extension_name
+      assert_equal '1.12.2', Emerald.version('CommandBlock-1.12.2')
+    end
+
     def test_semantic_version_with_prerealease_version
       filenames = [
         'CommandBlock-1.12.2-SNAPSHOT.jar',

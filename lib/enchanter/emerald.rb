@@ -26,11 +26,19 @@ module Enchanter
     end
 
     def snapshot(filename)
-      # TODO
+      filename = filename.delete_suffix('.jar')
+      parts = filename.split('-')
+      return nil if parts.length < 3
+
+      parts.at(2).slice(9..-1)
     end
 
     def snapshot?(filename)
-      # TODO
+      filename = filename.delete_suffix('.jar').downcase
+      parts = filename.split('-')
+      return false if parts.length <= 1
+
+      parts.at(2).include?('snapshot')
     end
   end
 end
