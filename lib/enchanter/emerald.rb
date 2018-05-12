@@ -3,8 +3,9 @@
 module Enchanter
   # To verify plugin files
   module Emerald
-
-    VERSION_REX = /^((\d+)(\.\d+)?(\.\d+)?).*$/
+    PLUGIN_NAME_REX = '([\w\d\-_]+)'
+    VERSION_REX = '((\d+)(\.\d+)?(\.\d+)?)'
+    SNAPSHOT_REX = 'SNAPSHOT(\.((\d{4}.\w{6})|(\w{6})|(\d{4})))?'
 
     module_function
 
@@ -18,9 +19,9 @@ module Enchanter
       return nil if parts.length <= 1
 
       version = parts.at(1)
-      return nil unless version.match?(VERSION_REX)
+      return nil unless version.match?(/^#{VERSION_REX}.*$/)
 
-      valid_version = version.match(VERSION_REX).to_a.at(1)
+      valid_version = version.match(/^#{VERSION_REX}.*$/).to_a.at(1)
       pad = 3 - valid_version.split('.').length
       valid_version + '.0' * pad
     end
@@ -39,6 +40,10 @@ module Enchanter
       return false if parts.length <= 1
 
       parts.at(2).include?('snapshot')
+    end
+
+    def valid?(filename)
+      filename.match?(/^#{PLUGIN_NAME_REX}(-#{VERSION_REX}(-#{SNAPSHOT_REX})?)?(.jar)?$/)
     end
   end
 end
